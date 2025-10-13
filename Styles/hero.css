@@ -1,3 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+
 /* -------------------- HERO SECTION -------------------- */
 .hero {
     display: flex;                       /* Text on left, image on right */
@@ -5,24 +15,26 @@
     justify-content: space-between;      /* Space between text & image */
     height: 100vh;                       /* Full screen height */
     padding: 0 6%;                       /* More balanced side spacing */
-    background: cornsilk;
+    /*background: cornsilk;*/
     position: relative;
     overflow: hidden;
 }
 
 /* -------------------- TEXT STYLES -------------------- */
 .hero-content {
+    margin: 0;
     max-width: 60%;                      /* Better balance with image */
     position: relative;                  /* Relative for better flow */
     top: 0;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     justify-content: center;
-    gap: 15px;
 }
 
 /* Heading and text */
 .hero-content #greet {
+    margin: 0;
     font-size: 35px;
     opacity: 0;
     transform: translateY(30px);
@@ -30,14 +42,16 @@
 }
 
 .hero-content #name {
+    margin: 0;
     font-size: 65px;
-    font-weight: bold;
+    height: fit-content;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeSlideUp 1s ease-out forwards;
 }
 
 .hero-content #my-info {
+    margin: 0;
     font-size: 32px;
     opacity: 0;
     transform: translateY(30px);
@@ -46,8 +60,9 @@
 }
 
 .hero-content #my-description {
+    margin: 0;
     font-size: 18px;
-    line-height: 1.5;
+    /*line-height: 1.5;*/
     color: #333;
     opacity: 0;
     transform: translateY(20px);
@@ -71,14 +86,16 @@
 .btn {
     background-color: black;
     color: white;
-    border-radius: 15px;
-    padding: 8px 20px;
+    padding: 5px 10px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     opacity: 0;
     animation: fadeSlideUp 1s ease-out forwards;
     animation-delay: 1.5s;
+    height: 50px;
     width: fit-content;
+
+
 }
 
 .btn:hover {
