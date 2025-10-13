@@ -5,16 +5,23 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #111;
     background: #fff;
+    margin: 0;          /* remove default margins */
+    padding: 0;         /* remove default padding */
+    overflow-x: hidden; /* prevent horizontal scroll */
+    height: 100%;
+    width: 100%;
+
 }
 
 
 /* -------------------- HERO SECTION -------------------- */
+
 .hero {
     display: flex;                       /* Text on left, image on right */
     align-items: center;                 /* Vertically center both sides */
     justify-content: space-between;      /* Space between text & image */
     height: 100vh;                       /* Full screen height */
-    padding: 0 6%;                       /* More balanced side spacing */
+    padding: 0 5%;                       /* More balanced side spacing */
     /*background: cornsilk;*/
     position: relative;
     overflow: hidden;
@@ -69,6 +76,60 @@ body {
     animation: fadeSlideUp 1s ease-out forwards;
     animation-delay: 1s;
 }
+
+
+/* ------- SOCIAL MEDIA BAR -------- */
+
+.social-media-bar{
+    height: 90px;
+    width: 650px;
+    position: absolute;
+    bottom: 35px;
+    left: 0;right: 0;margin: auto;
+}
+
+.social-links{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 90px;
+    width: 50vw;
+    background: #ece9e9;
+    justify-content: space-between;
+
+
+}
+.social-media-coin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    aspect-ratio: 1/1;
+    background: lavender;
+    border-radius: 50%;
+    border: 1px solid #020102;
+}
+/*.github{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    height: 85px;*/
+/*    aspect-ratio: 1/1;*/
+/*    background: lavender;*/
+/*    border-radius: 50%;*/
+/*}*/
+/*.twitter{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    height: 85px;*/
+/*    aspect-ratio: 1/1;*/
+/*    background: lavender;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+
+
 
 /* -------------------- ANIMATION -------------------- */
 @keyframes fadeSlideUp {
@@ -326,4 +387,14 @@ footer {
         height: 280px;
         margin-top: 40px;
     }
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: lightgreen;
 }
