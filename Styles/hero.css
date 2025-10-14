@@ -81,55 +81,74 @@ body {
 /* ------- SOCIAL MEDIA BAR -------- */
 
 .social-media-bar{
-    height: 90px;
-    width: 650px;
+    height: 70px;
+    width: 900px;
     position: absolute;
-    bottom: 35px;
     left: 0;right: 0;margin: auto;
-}
-
-.social-links{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    height: 90px;
-    width: 50vw;
-    background: #ece9e9;
-    justify-content: space-between;
-
-
-}
-.social-media-coin{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75px;
-    aspect-ratio: 1/1;
-    background: lavender;
-    border-radius: 50%;
-    border: 1px solid #020102;
+    bottom: 30px;
+
 }
-/*.github{*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    height: 85px;*/
-/*    aspect-ratio: 1/1;*/
-/*    background: lavender;*/
-/*    border-radius: 50%;*/
-/*}*/
-/*.twitter{*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    height: 85px;*/
-/*    aspect-ratio: 1/1;*/
-/*    background: lavender;*/
-/*    border-radius: 50%;*/
-/*}*/
 
+.social-links{
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    margin:  15px;
+    background: #efefef;
+    text-align: center;
+    font-size: 35px;
+    line-height: 75px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .4);
+    transition: all .3s ease-out;
 
+}
+.social-type{
+    color: white;
+}
 
+.social-links:hover{
+    width:300px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.linkedin:hover{
+    background: linear-gradient(135deg, #006097, #0077B5, #0096C7);
+}
+.github:hover{
+    background: linear-gradient(135deg, #333333, #000000);
+}
+.twitter:hover{
+    background: linear-gradient(135deg, #000000, #1E1E1E);
+}
+.facebook:hover{
+    background: linear-gradient(135deg, #1877F2, #145DBF);
+}
+.instagram:hover{
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.facebook:hover{
+    color: white;
+}
+.twitter:hover{
+    color: white;
+}
+.linkedin:hover{
+    color: white;
+}
+.instagram:hover{
+    color: white;
+}
+.github:hover{
+    color: white;
+}
 
 /* -------------------- ANIMATION -------------------- */
 @keyframes fadeSlideUp {

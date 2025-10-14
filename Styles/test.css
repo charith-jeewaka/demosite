@@ -1,0 +1,88 @@
+/* ---------------- SOCIAL MEDIA BAR ---------------- */
+.social-media-bar {
+    height: 90px;
+    width: 650px;
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 10;
+}
+
+/* ---------------- SOCIAL LINKS WRAPPER ---------------- */
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90px;
+    width: 100%;
+    background: linear-gradient(135deg, #f0f0f0, #e4e4e4);
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 0 25px;
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+/* ---------------- ICON CONTAINERS ---------------- */
+.social-media-coin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    aspect-ratio: 1 / 1;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------------- ICON STYLE ---------------- */
+.social-media-coin i {
+    font-size: 24px;
+    color: #000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ---------------- HOVER EFFECTS ---------------- */
+.social-media-coin:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
+}
+
+/* Hover color per brand */
+.social-media-coin:nth-child(1):hover i { color: #0077B5; } /* LinkedIn */
+.social-media-coin:nth-child(2):hover i { color: #333; }    /* GitHub */
+.social-media-coin:nth-child(3):hover i { color: #000; }    /* X (Twitter) */
+.social-media-coin:nth-child(4):hover i { color: #1877F2; } /* Facebook */
+.social-media-coin:nth-child(5):hover i { color: #E4405F; } /* Instagram */
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .social-media-bar {
+        width: 90%;
+        bottom: 20px;
+    }
+
+    .social-links {
+        gap: 10px;
+        height: 80px;
+        border-radius: 40px;
+    }
+
+    .social-media-coin {
+        height: 55px;
+    }
+
+    .social-media-coin i {
+        font-size: 20px;
+    }
+}
