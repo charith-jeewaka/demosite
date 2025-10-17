@@ -40,7 +40,11 @@
     <div class="hero-content" id="home">
         <h2 id="greet">Hey,I'm</h2>
         <h1 id="name">CHARITH JEEWAKA</h1>
-        <h2 id="my-info">I'M A FRONT END DEVELOPER</h2>
+
+        <div id="type-writer" >
+            <div id="static-text" >I'm a <span class ="auto-type">codeer</span> </div>
+        </div>
+
         <p id="my-description"><i class="fa-solid fa-laptop"></i> a passionate Java developer and web designer who loves
             transforming creative ideas into modern, functional, and visually appealing digital experiences. I enjoy
             working on both the logic behind applications and the design that brings them to life. I aim to craft
@@ -124,6 +128,16 @@
     <a href="https://github.com/charith-jeewaka">GitHub</a>
   </p>
 </footer>
+
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+    var typed = new Typed(".auto-type",{
+        strings: ["Software Engineer", "Web Developer", "Web Designer"],
+        typeSpeed: 150,backSpeed: 150,loop: true
+    })
+</script>
 
 </body>
 </html>

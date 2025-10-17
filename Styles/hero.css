@@ -2,14 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
+    background-image: url('../assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
     font-family: 'Poppins', sans-serif;
-    color: #111;
-    background: #fff;
+    color: #000000;
+    /*background: #fffdfd;*/
     margin: 0;          /* remove default margins */
     padding: 0;         /* remove default padding */
     overflow-x: hidden; /* prevent horizontal scroll */
-    height: 100%;
-    width: 100%;
+    /*height: 100%;*/
+    /*width: 100%;*/
 
 }
 
@@ -22,7 +28,6 @@ body {
     justify-content: space-between;      /* Space between text & image */
     height: 100vh;                       /* Full screen height */
     padding: 0 5%;                       /* More balanced side spacing */
-    /*background: cornsilk;*/
     position: relative;
     overflow: hidden;
 }
@@ -30,14 +35,26 @@ body {
 /* -------------------- TEXT STYLES -------------------- */
 .hero-content {
     margin: 0;
-    max-width: 60%;                      /* Better balance with image */
-    position: relative;                  /* Relative for better flow */
+    max-width: 60%; /* Better balance with image */
+    position: relative; /* Relative for better flow */
     top: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+/* --------- TYPE WRITER ---------- */
+
+#static-text{
+    font-size: 40px;
+    font-weight: bold ;
+}
+.auto-type{
+    color: #332f2f;
+}
+
+
 
 /* Heading and text */
 .hero-content #greet {
@@ -47,7 +64,6 @@ body {
     transform: translateY(30px);
     animation: fadeSlideUp 1s ease-out forwards;
 }
-
 .hero-content #name {
     margin: 0;
     font-size: 65px;
@@ -56,16 +72,16 @@ body {
     transform: translateY(30px);
     animation: fadeSlideUp 1s ease-out forwards;
 }
-
-.hero-content #my-info {
-    margin: 0;
-    font-size: 32px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeSlideUp 1s ease-out forwards;
-    animation-delay: 0.5s;
+{
+/*.hero-content #my-info {*/
+/*    margin: 0;*/
+/*    font-size: 32px;*/
+/*    opacity: 0;*/
+/*    transform: translateY(30px);*/
+/*    animation: fadeSlideUp 1s ease-out forwards;*/
+/*    animation-delay: 0.5s;*/
+/*}*/
 }
-
 .hero-content #my-description {
     margin: 0;
     font-size: 18px;
@@ -76,7 +92,6 @@ body {
     animation: fadeSlideUp 1s ease-out forwards;
     animation-delay: 1s;
 }
-
 
 /* ------- SOCIAL MEDIA BAR -------- */
 
@@ -93,14 +108,14 @@ body {
 }
 
 .social-links{
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border-radius: 100px;
     margin:  15px;
     background: #efefef;
     text-align: center;
     font-size: 35px;
-    line-height: 75px;
+    line-height: 65px;
     overflow: hidden;
     box-shadow: 5px 10px 20px rgba(150, 150, 150, .4);
     transition: all .3s ease-out;
@@ -111,7 +126,7 @@ body {
 }
 
 .social-links:hover{
-    width:300px;
+    width:250px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -168,7 +183,7 @@ body {
     color: white;
     padding: 5px 10px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     opacity: 0;
     animation: fadeSlideUp 1s ease-out forwards;
     animation-delay: 1.5s;
@@ -183,6 +198,7 @@ body {
     color: black;
     border: 1px solid black;
     transform: scale(1.08);
+    cursor: pointer;
 }
 
 /* -------------------- IMAGE CIRCLE -------------------- */
@@ -194,6 +210,7 @@ body {
     justify-content: center;
     align-items: center;
     right: 0;
+
 }
 
 .img-box {
@@ -206,13 +223,15 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .4);
+
 }
 
 .img-box::before {
     content: "";
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 300px;
     background: conic-gradient(transparent, #000000, transparent, #3a3c3a);
     animation: rotateBorder 6s linear infinite;
 }
@@ -257,9 +276,9 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;                 /* ensures it's above all content */
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);   /* glassy blur effect */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    /*background: rgba(255, 255, 255, 0.8);*/
+    backdrop-filter: blur(2px);   /* glassy blur effect */
+    /*box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);*/
     animation: slideDown 0.8s ease forwards;
 }
 
@@ -415,5 +434,5 @@ footer {
     align-items: center;
     text-align: center;
     height: 100vh;
-    background: lightgreen;
+    /*background: lightgreen;*/
 }
