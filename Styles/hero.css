@@ -1,6 +1,38 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Fullscreen Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111; /* dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Spinning loader */
+.loader {
+    border: 6px solid #f3f3f3;        /* light grey */
+    border-top: 6px solid #3498db;     /* main accent color */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
 body {
     background-image: url('../assets/images/bg.png');
     background-repeat: no-repeat;
@@ -43,6 +75,7 @@ body {
     gap: 10px;
     justify-content: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 /* --------- TYPE WRITER ---------- */
 
@@ -52,6 +85,7 @@ body {
 }
 .auto-type{
     color: #332f2f;
+    animation-delay: 2s;
 }
 
 
@@ -71,17 +105,9 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeSlideUp 1s ease-out forwards;
+    animation-delay: 500ms;
 }
-{
-/*.hero-content #my-info {*/
-/*    margin: 0;*/
-/*    font-size: 32px;*/
-/*    opacity: 0;*/
-/*    transform: translateY(30px);*/
-/*    animation: fadeSlideUp 1s ease-out forwards;*/
-/*    animation-delay: 0.5s;*/
-/*}*/
-}
+
 .hero-content #my-description {
     margin: 0;
     font-size: 18px;
@@ -117,8 +143,11 @@ body {
     font-size: 35px;
     line-height: 65px;
     overflow: hidden;
-    box-shadow: 5px 10px 20px rgba(150, 150, 150, .4);
-    transition: all .3s ease-out;
+    animation: fadeSlideUp 1s ease-out forwards;
+    transition: all 0.3s ease-out;
+    box-shadow:
+            4px 4px 8px rgba(0, 0, 0, 0.2),    /* bottom-right shadow (depth) */
+            -4px -4px 8px rgba(255, 255, 255, 0.7); /* top-left highlight */
 
 }
 .social-type{
@@ -149,18 +178,10 @@ body {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
-.facebook:hover{
-    color: white;
-}
-.twitter:hover{
-    color: white;
-}
-.linkedin:hover{
-    color: white;
-}
-.instagram:hover{
-    color: white;
-}
+.facebook:hover,
+.twitter:hover,
+.linkedin:hover,
+.instagram:hover,
 .github:hover{
     color: white;
 }
@@ -178,27 +199,45 @@ body {
 }
 
 /* -------------------- BUTTON -------------------- */
-.btn {
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    opacity: 0;
-    animation: fadeSlideUp 1s ease-out forwards;
-    animation-delay: 1.5s;
-    height: 50px;
-    width: fit-content;
 
+.btn {
+    height: 50px;
+    width: 155px;
+    /*position: relative;*/
+    background: black;
+    color: white;
+    border: 1px solid black;
+    padding: 8px 8px;
+    font-size: 18px;
+    overflow: hidden;
+    animation: fadeSlideUp 1s ease-out forwards;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation-delay: 1500ms;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(-25deg);
+    transition: all 0.6s ease;
 
 }
 
 .btn:hover {
-    background-color: white;
+    transform: scale(1.01);
     color: black;
-    border: 1px solid black;
-    transform: scale(1.08);
+    background-color: transparent;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover::before {
+    left: 125%;
 }
 
 /* -------------------- IMAGE CIRCLE -------------------- */
@@ -284,7 +323,7 @@ header {
 
 /* NAV CONTAINER */
 .navbar nav {
-    display: flex;                 /* flexbox layout */
+    display: flex;
     justify-content: space-between;/* logo left, links right */
     align-items: center;
     padding: 10px 4%;
@@ -292,14 +331,20 @@ header {
 }
 
 /* LOGO TEXT */
-.logo {
+#my-logo {
     font-size: 30px;
     font-weight: 700;
-    color: #020102;
+    color: #000000;
     letter-spacing: 1px;
     cursor: pointer;
     position: relative;
     animation: fadeInLeft 1s ease forwards;
+    transition: all 0.6s ease;
+
+}
+
+#my-logo:hover {
+    scale: 1.03;
 }
 
 /* NAV LINKS */
@@ -427,7 +472,7 @@ footer {
     }
 }
 
-.about{
+.about-section{
     display: flex;
     flex-direction: column;
     justify-content: center;

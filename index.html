@@ -19,13 +19,18 @@
 </head>
 
 <body>
+
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
 <header>
     <div class="navbar">
         <nav >
-            <div class="logo">Charith Jeewaka</div>
+            <div id="my-logo">Charith Jeewaka</div>
             <ul class="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#hero-section">HOME</a></li>
+                <li><a href="#about-section">ABOUT</a></li>
                 <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#assignments">ASSIGNMENTS</a></li>
@@ -36,13 +41,14 @@
 </header>
 
 
-<section class="hero">
+<section class="hero" id="hero-section">
+
     <div class="hero-content" id="home">
         <h2 id="greet">Hey,I'm</h2>
         <h1 id="name">CHARITH JEEWAKA</h1>
 
         <div id="type-writer" >
-            <div id="static-text" >I'm a <span class ="auto-type">codeer</span> </div>
+            <div id="static-text" >I'm a <span class ="auto-type"></span> </div>
         </div>
 
         <p id="my-description"><i class="fa-solid fa-laptop"></i> a passionate Java developer and web designer who loves
@@ -50,8 +56,11 @@
             working on both the logic behind applications and the design that brings them to life. I aim to craft
             projects that are both powerful and user-friendly.
         </p>
+
         <button class="btn">Download CV</button>
+
     </div>
+
     <div class="img-home">
         <div class="img-box">
             <div class="img-item">
@@ -96,27 +105,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-<section class="about">
+<section class="about-section" id="about-section">
     <div class="about-content">
         <h2 id="about">ABOUT</h2>
     </div>
 
 </section>
-
-
-
-
-
-
 
 
 
@@ -131,13 +125,22 @@
 
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
 <script>
     var typed = new Typed(".auto-type",{
         strings: ["Software Engineer", "Web Developer", "Web Designer"],
         typeSpeed: 150,backSpeed: 150,loop: true
     })
 </script>
+
+<script>
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        preloader.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => preloader.style.display = 'none', 500);
+    });
+</script>
+
 
 </body>
 </html>
