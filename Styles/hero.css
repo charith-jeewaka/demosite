@@ -507,7 +507,6 @@ footer {
         align-items: center;
         gap: 10px;
         order: 2;
-        /*color: crimson;*/
     }
 
     .hero-content #name {
@@ -523,9 +522,9 @@ footer {
     }
 
     #my-description {
-        font-size: 15px;
+        font-size: 12px;
         width: 90%;
-        line-height: 1.5;
+        line-height: 1.2;
     }
 
     .img-home {
@@ -543,7 +542,7 @@ footer {
         position: relative;
         width: 50vw;
         height: 50vw;
-        border-radius: 50%;
+        /*border-radius: 90%;*/
         padding: 5px;
         display: flex;
         justify-content: center;
@@ -570,21 +569,17 @@ footer {
         width: 95%;
         height: 95%;
         /*background: #fff;*/
-        border-radius: 50%;
+        /*border-radius: 90%;*/
         z-index: 0;
     }
 
-    /*@keyframes rotateBorder {*/
-    /*    0% { transform: rotate(0deg); }*/
-    /*    100% { transform: rotate(360deg); }*/
-    /*}*/
 
     /* Inner image */
     .img-item {
         position: relative;
         width: 100%;
         height: 100%;
-        border-radius: 50%;
+        /*border-radius: 90%;*/
         display: flex;
         justify-content: center;
         overflow: hidden;
