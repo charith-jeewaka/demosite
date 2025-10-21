@@ -42,12 +42,9 @@ body {
 
     font-family: 'Poppins', sans-serif;
     color: #000000;
-    /*background: #fffdfd;*/
     margin: 0;          /* remove default margins */
     padding: 0;         /* remove default padding */
     overflow-x: hidden; /* prevent horizontal scroll */
-    /*height: 100%;*/
-    /*width: 100%;*/
 
 }
 
@@ -434,6 +431,13 @@ footer {
 
 /*!* -------------------- RESPONSIVE DESIGN -------------------- *!*/
 @media (max-width: 600px) {
+    body {
+        background-image: url('../assets/images/mobilebg.png'); /* smaller image version */
+        background-attachment: scroll; /* disable fixed background on mobile */
+        background-position: top center; /* optional, prevents awkward cropping */
+        background-size: cover; /* keep full coverage */
+    }
+
     header {
         position: relative;
         backdrop-filter: none;
