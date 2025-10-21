@@ -8,13 +8,15 @@
     <meta name="description" content="Portfolio of Charith Jeewaka, a front-end and web developer.">
     <meta name="author" content="Charith Jeewaka">
 
-  <title>Charith Jeewaka | Portfolio</title>
+    <title>Charith Jeewaka | Portfolio</title>
 
-  <link rel="stylesheet" href="assets/lib/normalize.css">
-  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/lib/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-   <link rel="stylesheet" href="Styles/hero.css">
+    <link rel="stylesheet" href="Styles/hero.css">
+    <link rel="stylesheet" href="Styles/about.css">
+    <link rel="stylesheet" href="Styles/skills.css">
 
 </head>
 
@@ -26,12 +28,12 @@
 
 <header>
     <div class="navbar">
-        <nav >
+        <nav>
             <div id="my-logo">Charith Jeewaka</div>
             <ul class="nav-links">
                 <li><a href="#hero-section">HOME</a></li>
                 <li><a href="#about-section">ABOUT</a></li>
-                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#skills-section">SKILLS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#assignments">ASSIGNMENTS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -47,8 +49,8 @@
         <h2 id="greet">Hey,I'm</h2>
         <h1 id="name">CHARITH JEEWAKA</h1>
 
-        <div id="type-writer" >
-            <div id="static-text" >I'm a <span class ="auto-type"></span> </div>
+        <div id="type-writer">
+            <div id="static-text">I'm a <span class="auto-type"></span></div>
         </div>
 
         <p id="my-description"><i class="fa-solid fa-laptop"></i> a passionate Java developer and web designer who loves
@@ -72,37 +74,33 @@
     <div class="social-media-bar">
 
         <div class="social-links  linkedin">
-            <i class="fa-brands fa-linkedin-in"  id="linked"></i>
+            <i class="fa-brands fa-linkedin-in" id="linked"></i>
             <span class="social-type">Linkedin</span>
         </div>
 
         <div class="social-links github">
-            <i class="fa-brands fa-github"  id="git"></i>
+            <i class="fa-brands fa-github" id="git"></i>
             <span class="social-type">Github</span>
         </div>
 
         <div class="social-links twitter">
-            <i class="fa-brands fa-x-twitter"  id="x"></i>
+            <i class="fa-brands fa-x-twitter" id="x"></i>
             <span class="social-type">Twitter</span>
         </div>
 
         <div class="social-links facebook">
-            <i class="fa-brands fa-facebook-f"  id="fb"></i>
+            <i class="fa-brands fa-facebook-f" id="fb"></i>
             <span class="social-type">Facebook</span>
         </div>
 
         <div class="social-links instagram">
-            <i class="fa-brands fa-instagram" ></i>
+            <i class="fa-brands fa-instagram"></i>
             <span class="social-type">Instagram</span>
         </div>
 
 
     </div>
 </section>
-
-
-
-
 
 
 <section class="about-section" id="about-section">
@@ -112,28 +110,34 @@
 
 </section>
 
+<section class="skills-section" id="skills-section">
+    <div class="skills-content">
+        <h2 id="skills">SKILLS</h2>
+    </div>
+
+</section>
 
 
 <footer>
-  <p>&copy; 2025 Charith Jeewaka | Front-End & Web Developer</p>
-  <p>
-    <a href="mailto:charith@example.com">Email Me</a> |
-    <a href="https://www.linkedin.com/in/charith">LinkedIn</a> |
-    <a href="https://github.com/charith-jeewaka">GitHub</a>
-  </p>
+    <p>&copy; 2025 Charith Jeewaka | Front-End & Web Developer</p>
+    <p>
+        <a href="mailto:charith@example.com">Email Me</a> |
+        <a href="https://www.linkedin.com/in/charith">LinkedIn</a> |
+        <a href="https://github.com/charith-jeewaka">GitHub</a>
+    </p>
 </footer>
 
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
-    var typed = new Typed(".auto-type",{
+    var typed = new Typed(".auto-type", {
         strings: ["Software Engineer", "Web Developer", "Web Designer"],
-        typeSpeed: 150,backSpeed: 150,loop: true
+        typeSpeed: 150, backSpeed: 150, loop: true
     })
 </script>
 
 <script>
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         const preloader = document.getElementById('preloader');
         preloader.style.opacity = '0';
         preloader.style.transition = 'opacity 0.5s ease';
