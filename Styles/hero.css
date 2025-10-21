@@ -499,12 +499,14 @@ footer {
         flex-direction: column;
         text-align: center;
         height: auto;
-        padding: 80px 5% 100px 5%;
+        padding: 40px 4% 100px 4%;
     }
 
     .hero-content {
         max-width: 100%;
         align-items: center;
+        gap: 10px;
+        order: 2;
         /*color: crimson;*/
     }
 
@@ -527,9 +529,71 @@ footer {
     }
 
     .img-home {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        right: 0;
+
+    }
+
+    .img-box {
+        position: relative;
+        width: 50vw;
+        height: 50vw;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 5px 10px 20px rgba(150, 150, 150, .4);
+
+    }
+
+    .img-box::before {
+        content: "";
+        position: absolute;
         width: 250px;
-        height: 250px;
-        margin: 25px 0;
+        height: 100px;
+        background:black;
+    );
+        animation: rotateBorder 6s linear infinite;
+    }
+
+    .img-box::after {
+        background-image: url("../assets/images/bg.png");
+        content: "";
+        position: absolute;
+        width: 95%;
+        height: 95%;
+        /*background: #fff;*/
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    /*@keyframes rotateBorder {*/
+    /*    0% { transform: rotate(0deg); }*/
+    /*    100% { transform: rotate(360deg); }*/
+    /*}*/
+
+    /* Inner image */
+    .img-item {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .img-item img {
+        width: 100%;
+        object-fit: cover;
     }
 
     .btn {
@@ -553,9 +617,6 @@ footer {
 
     }
 
-    /*.social-links:hover {*/
-    /*    width: 150px;*/
-    /*}*/
 }
 
 
