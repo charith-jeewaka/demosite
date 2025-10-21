@@ -498,8 +498,9 @@ footer {
     .hero {
         flex-direction: column;
         text-align: center;
-        height: auto;
+        height: 100%;
         padding: 40px 4% 100px 4%;
+
     }
 
     .hero-content {
@@ -609,6 +610,7 @@ footer {
         height: 45px;
         font-size: 22px;
         margin: 8px;
+        line-height: 2.3;
 
     }
 
