@@ -42,7 +42,7 @@
     </div>
 </header>
 
-
+<!--hero-section -->
 <section class="hero" id="hero-section">
 
     <div class="hero-content" id="home">
@@ -102,7 +102,7 @@
     </div>
 </section>
 
-
+<!--About-section -->
 <section class="about-section" id="about-section">
     <div class="about-content">
         <h2 id="about">ABOUT</h2>
@@ -110,6 +110,7 @@
 
 </section>
 
+<!--skills-section -->
 <section class="skills-section" id="skills-section">
     <div class="skills-content">
         <h2 id="skills">SKILLS</h2>
@@ -127,7 +128,10 @@
     </p>
 </footer>
 
+<!--main js-->
+<script src="js/main.js" defer> </script>
 
+<!--typing animation-->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
     var typed = new Typed(".auto-type", {
@@ -136,14 +140,7 @@
     })
 </script>
 
-<script>
-    window.addEventListener('load', function () {
-        const preloader = document.getElementById('preloader');
-        preloader.style.opacity = '0';
-        preloader.style.transition = 'opacity 0.5s ease';
-        setTimeout(() => preloader.style.display = 'none', 500);
-    });
-</script>
+
 
 
 </body>
