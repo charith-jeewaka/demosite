@@ -1,52 +1,85 @@
 .about-section{
-    height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
-    padding: 50px 3% 0 3%;
+    padding: 50px 4% 0 4%;
 }
 
 #about-heading{
     position: relative;
     width: 100%;
-    height: 15vh;
+    height: 100px;
     font-size: 60px;
     text-align: right;
-    font-weight: bold;
-    /*border: 1px solid black;*/
+    /*font-weight: bold;*/
+    /*line-height: 2px;*/
+    text-shadow:5px 5px 6px rgba(0,0,0,0.36)
+
 }
 #about-heading span{
-    border-bottom: 3px solid black;
+    text-decoration: underline;
 }
-
+#about-heading span:hover{
+    text-decoration: none;
+}
 
 #about-content{
     display: flex;
     flex-direction: row;
-    /*background: #45a9ff;*/
     height: 90vh;
     width: 100%;
     justify-content: space-between;
 
 }
 #my-image img{
-    width: 300px;
     height: 500px;
-    /*padding: 20px;*/
+    aspect-ratio: 9/16;
     border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
 }
 #my-image{
     width: 50vw;
     height: 550px;
-    background: #ffffff;
+    /*border: 1px solid black;*/
+    display: flex;
+    /*padding: 10px;*/
+    justify-content: space-between;
 }
 #about-texts{
     width: 50vw;
     height: 550px;
-    /*background: #020102;*/
+}
+
+#about-image-texts{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid black;*/
+    height: 500px;
+    width: 50%;
+    justify-content: space-between;
+}
+#about-image-texts div{
+    border-bottom: 2px solid black;
+    font-size: 22px;
+    padding-bottom: 10px;
+    text-shadow:5px 5px 6px rgba(0,0,0,0.36)
+;
+;
+}
+#about-image-texts div span{
+    font-weight: bold;
+    font-size: 23px;
+}
+#about-image-texts div a {
+    font-weight: bold;
+    font-size: 23px;
+    color: black;
+    display: inline-block;
 
 }
 
-/*------------------Animations------------------*/
+/*------------------------------------------Animations------------------------------------------------*/
 
 /*  Base hidden state */
 .slide-in {
@@ -88,5 +121,55 @@
 .slide-in.up.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/*-----------------underline animation----------------*/
+.underline-animate {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.underline-animate:hover {
+    text-decoration: none;
+}
+
+/* create the underline */
+.underline-animate::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+/* on hover – trigger animation */
+.underline-animate:hover::after {
+    animation: underline-run 0.5s ease-in-out 2;
+}
+
+/* keyframes for the underline movement */
+@keyframes underline-run {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    51% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
 }
 
