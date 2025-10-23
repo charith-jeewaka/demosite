@@ -37,7 +37,7 @@ window.addEventListener("scroll", () => {
     });
 });
 
-
+//return home
 const btn = document.querySelector("#return-home");
 window.addEventListener("scroll", () => {
     if (window.scrollY > 700){
@@ -46,3 +46,21 @@ window.addEventListener("scroll", () => {
         btn.classList.remove("show");
     }
 });
+
+// slide in
+
+const elements = document.querySelectorAll('.slide-in');
+
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight - 70 && rect.bottom > 70;
+
+        if (inView) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+});
+//
