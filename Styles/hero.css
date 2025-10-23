@@ -1,6 +1,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/*return home */
+#return-home{
+    position: fixed;
+    width: 25px;
+    height: 35px;
+    bottom: 30px;
+    right: 30px;
+    background: white;
+    display: flex;justify-content: center;align-items: center;
+    text-decoration: none;
+    border-radius: 15px;
+    opacity: 0;
+    box-shadow: 2px 2px 8px #000;
+}
+#return-home.show{
+    opacity: 1;
+    transition: 600ms;
+}
+#return-home:hover{
+    scale: 1.1;
+}
+
+/*scroll animation*/
+html {
+    scroll-behavior: smooth;
+}
+
 /* Fullscreen Preloader */
 #preloader {
     position: fixed;
@@ -372,11 +399,23 @@ header {
 
 .nav-links li a:hover::after {
     width: 100%;
+
 }
 
 .nav-links li a:hover {
     font-weight: bold;
 }
+
+
+
+.nav-links li a.active::after {
+    width: 100%; /* show underline */
+}
+
+/*.nav-links li a.active {*/
+/*    font-weight: bold; !* same as hover *!*/
+/*    color: #000000;    !* optional – ensures visibility *!*/
+/*}*/
 
 /* -------------------- ANIMATIONS -------------------- */
 @keyframes slideDown {

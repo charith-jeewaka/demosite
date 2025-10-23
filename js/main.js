@@ -13,3 +13,36 @@ menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
     navLinks.classList.toggle('active');
 });
+
+// scroll spy
+const sections = document.querySelectorAll("section");
+const navigationLinks = document.querySelectorAll(".nav-links li a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navigationLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+
+
+const btn = document.querySelector("#return-home");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 700){
+        btn.classList.add("show");
+    }else {
+        btn.classList.remove("show");
+    }
+});
