@@ -1,8 +1,16 @@
+:root {
+    --text-shadow:5px 5px 6px rgba(0,0,0,0.36);
+    --text-color: #000000;
+    --image-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
 .about-section{
-    height: 120vh;
+    height: 105vh;
     display: flex;
     flex-direction: column;
     padding: 50px 4% 0 4%;
+    /*border: 1px solid black;*/
 }
 
 #about-heading{
@@ -12,8 +20,8 @@
     font-size: 60px;
     text-align: right;
     /*font-weight: bold;*/
-    /*line-height: 2px;*/
-    text-shadow:5px 5px 6px rgba(0,0,0,0.36)
+    line-height: 2px;
+    text-shadow:var(--text-shadow);
 
 }
 #about-heading span{
@@ -34,8 +42,8 @@
 #my-image img{
     height: 500px;
     aspect-ratio: 9/16;
-    border-radius: 40px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /*border-radius: 40px;*/
+    box-shadow:var(--image-shadow);
 
 }
 #my-image{
@@ -47,7 +55,7 @@
     justify-content: space-between;
 }
 #about-texts{
-    width: 50vw;
+    width: 50%;
     height: 550px;
 }
 
@@ -60,31 +68,74 @@
     justify-content: space-between;
 }
 #about-image-texts div{
-    border-bottom: 2px solid black;
-    font-size: 22px;
+    border-bottom: 3px solid black;
+    font-size: 21px;
     padding-bottom: 10px;
-    text-shadow:5px 5px 6px rgba(0,0,0,0.36)
-;
-;
+    text-shadow:var(--text-shadow);
 }
 #about-image-texts div span{
     font-weight: bold;
-    font-size: 23px;
+    font-size: 22px;
 }
 #about-image-texts div a {
     font-weight: bold;
-    font-size: 23px;
-    color: black;
+    font-size: 22px;
+    color: var(--text-color);
     display: inline-block;
+}
+
+/*--------------------------second half feOffset the about-----------------------------*/
+
+#about-texts{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid black;*/
+    height: 500px;
+    width: 50%;
+    justify-content: space-between;
+}
+.about-texts{
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid black;*/
+    /*height: 45%;*/
+    width: 100%;
+    padding-left: 10px;
+    justify-content: space-between;
+    text-shadow:var(--text-shadow);
 
 }
+
+.about-texts-img img{
+    height: 200px;
+    aspect-ratio: 1/1;
+    /*border-radius: 30px;*/
+    padding-left: 20px;
+    /*box-shadow:var(--image-shadow);*/
+}
+
+.about-texts-txt{
+    border-bottom: 3px solid black;
+    font-size: 21px;
+    width: 350px;
+}
+
+.about-texts-txt a{
+    font-weight: bold;
+    color:var(--text-color);
+}
+.about-texts-txt span{
+    font-weight: bold;
+}
+
+
 
 /*------------------------------------------Animations------------------------------------------------*/
 
 /*  Base hidden state */
 .slide-in {
     opacity: 0;
-    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /*  Slide In From Left */
@@ -171,5 +222,19 @@
         transform: scaleX(0);
         transform-origin: right;
     }
+}
+
+/*-----------------rotate hover----------------*/
+
+
+img.tilt-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-origin: center;
+    border-radius: 10px;
+}
+
+img.tilt-hover:hover {
+    transform: rotate3d(1, 1, 0, 8deg) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
