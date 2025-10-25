@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     padding: 50px 4% 0 4%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 #about-heading{
@@ -284,17 +284,23 @@ img.tilt-hover:hover {
 }
 
 @media (max-width: 768px) {
-    .about-section{
-        height: 135vw;
+    :root{
+        --about-section-font-size:3vw;
+        --about-section-div-height:69vw;
+        --about-section-small-div-height: 30vw;
     }
 
-    :root{
-        --about-section-font-size:2.4vw;
-        --about-section-div-height:49vw;
-        --about-section-small-div-height: 23vw;
+    .about-section{
+        height: 180vw;
     }
+
+    #about-heading{
+        font-size: 23px;
+
+    }
+
     #my-image{
-        width: 85%;
+        width: 95%;
     }
 
     #about-content{
@@ -302,15 +308,15 @@ img.tilt-hover:hover {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 15vw;
+        gap: 10px;
 
     }
 
     #about-texts{
-        width: 85%;
+        width: 90%;
         display: flex;
         flex-direction: column;
-        gap: 10%;
+        gap: 10px;
     }
 
 
