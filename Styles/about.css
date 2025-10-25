@@ -287,11 +287,11 @@ img.tilt-hover:hover {
     :root{
         --about-section-font-size:3vw;
         --about-section-div-height:69vw;
-        --about-section-small-div-height: 30vw;
+        --about-section-small-div-height: 36vw;
     }
 
     .about-section{
-        height: 180vw;
+        height: 175vw;
     }
 
     #about-heading{
@@ -308,7 +308,7 @@ img.tilt-hover:hover {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
+        gap: 13px;
 
     }
 
