@@ -2,6 +2,9 @@
     --text-shadow:5px 5px 6px rgba(0,0,0,0.36);
     --text-color: #000000;
     --image-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    --about-section-font-size:1.6vw;
+    --about-section-div-height:36vw;
+    --about-section-small-div-height: 15vw;
 
 }
 
@@ -10,16 +13,16 @@
     display: flex;
     flex-direction: column;
     padding: 50px 4% 0 4%;
-    /*border: 1px solid black;*/
+    border: 1px solid black;
 }
 
 #about-heading{
     position: relative;
     width: 100%;
     height: 100px;
-    font-size: 60px;
+    font-size: 5vw;
     text-align: right;
-    /*font-weight: bold;*/
+    font-weight: bold;
     line-height: 2px;
     text-shadow:var(--text-shadow);
 
@@ -40,15 +43,15 @@
 
 }
 #my-image img{
-    height: 500px;
+    height:var(--about-section-div-height);
     aspect-ratio: 9/16;
     /*border-radius: 40px;*/
     box-shadow:var(--image-shadow);
 
 }
 #my-image{
-    width: 47vw;
-    height: 550px;
+    width: 45vw;
+    height:var(--about-section-div-height);
     /*border: 1px solid black;*/
     display: flex;
     /*padding: 10px;*/
@@ -56,30 +59,30 @@
 }
 #about-texts{
     width: 50%;
-    height: 550px;
+    height:var(--about-section-div-height);
 }
 
 #about-image-texts{
     display: flex;
     flex-direction: column;
     /*border: 1px solid black;*/
-    height: 500px;
+    height:var(--about-section-div-height);
     width: 50%;
     justify-content: space-between;
 }
 #about-image-texts div{
     border-bottom: 3px solid black;
-    font-size: 21px;
+    font-size: var(--about-section-font-size);
     padding-bottom: 10px;
     text-shadow:var(--text-shadow);
 }
 #about-image-texts div span{
     font-weight: bold;
-    font-size: 22px;
+    font-size: var(--about-section-font-size);
 }
 #about-image-texts div a {
     font-weight: bold;
-    font-size: 22px;
+    font-size: var(--about-section-font-size);
     color: var(--text-color);
     display: inline-block;
 }
@@ -98,25 +101,23 @@
     display: flex;
     flex-direction: column;
     /*border: 1px solid black;*/
-    height: 500px;
-    width: 46%;
+    height:var(--about-section-div-height);
+    width: 47%;
     justify-content: space-between;
 
 }
 .about-texts{
     display: flex;
     flex-direction: row;
-    /*border: 1px solid black;*/
-    /*height: 45%;*/
     width: 100%;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     justify-content: space-between;
     text-shadow:var(--text-shadow);
 
 }
 
 .about-texts-img img{
-    height: 200px;
+    height: var(--about-section-small-div-height);
     aspect-ratio: 1/1;
     /*padding-left: 20px;*/
     box-shadow:var(--image-shadow);
@@ -124,10 +125,11 @@
 
 .about-texts-txt{
     border-bottom: 3px solid black;
-    font-size: 21px;
+    font-size: var(--about-section-font-size);
     width: 350px;
     transition: all 0.3s ease;
     transform: translateY(0);
+    margin-left: 2vw;
 }
 
 .about-texts-txt a{
@@ -245,5 +247,72 @@
 img.tilt-hover:hover {
     transform:  scale(1.03);
     transition: transform 0.4s ease, box-shadow 0.4s ease
+}
+
+
+@media(min-width: 768px)and (max-width: 900px) {
+    .about-section{
+        height: 150vw;
+    }
+
+:root{
+    --about-section-font-size:2.4vw;
+    --about-section-div-height:49vw;
+    --about-section-small-div-height: 23vw;
+}
+    #my-image{
+        width: 85%;
+    }
+
+
+    #about-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15vw;
+
+    }
+
+    #about-texts{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .about-section{
+        height: 135vw;
+    }
+
+    :root{
+        --about-section-font-size:2.4vw;
+        --about-section-div-height:49vw;
+        --about-section-small-div-height: 23vw;
+    }
+    #my-image{
+        width: 85%;
+    }
+
+    #about-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15vw;
+
+    }
+
+    #about-texts{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+    }
+
+
 }
 
