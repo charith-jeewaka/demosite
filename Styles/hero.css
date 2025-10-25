@@ -8,12 +8,12 @@
     height: 40px;
     bottom: 30px;
     right: 30px;
-    background: white;
+    background: transparent;
     display: flex;justify-content: center;align-items: center;
     text-decoration: none;
     /*border-radius: 15px;*/
     opacity: 0;
-    box-shadow: 2px 2px 8px #000;
+    box-shadow: var(--image-shadow);
 }
 #return-home.show{
     opacity: 1;
@@ -402,23 +402,16 @@ header {
 
 .nav-links li a:hover::after {
     width: 100%;
-
 }
 
 .nav-links li a:hover {
     font-weight: bold;
+    transition: all 0.9s ease;
 }
-
-
 
 .nav-links li a.active::after {
     width: 100%; /* show underline */
 }
-
-/*.nav-links li a.active {*/
-/*    font-weight: bold; !* same as hover *!*/
-/*    color: #000000;    !* optional – ensures visibility *!*/
-/*}*/
 
 /* -------------------- ANIMATIONS -------------------- */
 @keyframes slideDown {

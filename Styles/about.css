@@ -47,7 +47,7 @@
 
 }
 #my-image{
-    width: 50vw;
+    width: 47vw;
     height: 550px;
     /*border: 1px solid black;*/
     display: flex;
@@ -83,6 +83,14 @@
     color: var(--text-color);
     display: inline-block;
 }
+/*text hover and scale*/
+#about-image-texts:hover{
+    transition: all 0.3s ease;
+    transform: translateY(-10px) scale(1);
+
+
+
+}
 
 /*--------------------------second half feOffset the about-----------------------------*/
 
@@ -91,8 +99,9 @@
     flex-direction: column;
     /*border: 1px solid black;*/
     height: 500px;
-    width: 50%;
+    width: 46%;
     justify-content: space-between;
+
 }
 .about-texts{
     display: flex;
@@ -109,15 +118,16 @@
 .about-texts-img img{
     height: 200px;
     aspect-ratio: 1/1;
-    /*border-radius: 30px;*/
-    padding-left: 20px;
-    /*box-shadow:var(--image-shadow);*/
+    /*padding-left: 20px;*/
+    box-shadow:var(--image-shadow);
 }
 
 .about-texts-txt{
     border-bottom: 3px solid black;
     font-size: 21px;
     width: 350px;
+    transition: all 0.3s ease;
+    transform: translateY(0);
 }
 
 .about-texts-txt a{
@@ -126,6 +136,12 @@
 }
 .about-texts-txt span{
     font-weight: bold;
+}
+
+
+/* Hover effect */
+.tile:hover {
+    transform: translateY(-10px) scale(1);
 }
 
 
@@ -226,15 +242,8 @@
 
 /*-----------------rotate hover----------------*/
 
-
-img.tilt-hover {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    transform-origin: center;
-    border-radius: 10px;
-}
-
 img.tilt-hover:hover {
-    transform: rotate3d(1, 1, 0, 8deg) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform:  scale(1.03);
+    transition: transform 0.4s ease, box-shadow 0.4s ease
 }
 
