@@ -261,7 +261,7 @@ img.tilt-hover:hover {
     --about-section-small-div-height: 23vw;
 }
     #my-image{
-        width: 85%;
+        width: 90%;
     }
 
 
@@ -275,7 +275,7 @@ img.tilt-hover:hover {
     }
 
     #about-texts{
-        width: 85%;
+        width: 95%;
         display: flex;
         flex-direction: column;
         gap: 10%;

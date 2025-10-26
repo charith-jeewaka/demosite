@@ -63,4 +63,23 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-//
+//cursor
+
+
+const cursor = document.querySelector(".custom-cursor");
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.top = e.clientY + "px";
+    cursor.style.left = e.clientX + "px";
+});
+
+document.querySelectorAll("a, button, .hover-target").forEach((el) => {
+    el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
+    el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+});
+
+// Click pulse effect
+document.addEventListener("click", () => {
+    cursor.classList.add("click");
+    setTimeout(() => cursor.classList.remove("click"), 400);
+});
