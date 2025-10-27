@@ -1,0 +1,11 @@
+#projects-section{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+    font-size: 35px;
+}

@@ -54,7 +54,7 @@ const elements = document.querySelectorAll('.slide-in');
 window.addEventListener('scroll', () => {
     elements.forEach(el => {
         const rect = el.getBoundingClientRect();
-        const inView = rect.top < window.innerHeight - 70 && rect.bottom > 100;
+        const inView = rect.top < window.innerHeight - 70 && rect.bottom > 60;
 
         if (inView) {
             el.classList.add('active');
