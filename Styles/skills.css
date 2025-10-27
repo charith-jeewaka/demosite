@@ -20,7 +20,7 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-10px);
     }
     100% {
         transform: translateY(0);
@@ -36,9 +36,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 90vh;
-    border: 1px solid black;
-    position: relative;
+    height: 100vw;
+    border: 2px solid black;
+    /*position: relative;*/
 }
 
 /*main heading container*/
@@ -76,16 +76,12 @@
     /*border: 1px solid #00c507;*/
     display: flex;
     flex-direction: column;
+    /*backdrop-filter: blur(3px);*/
+    /*box-shadow: var(--image-shadow);*/
+    /*border-radius: 15px;*/
 }
 
-/*right side div*/
-#skills-div{
-    height: 90vh;
-    width: 110vh;
-    border: 1px solid #ea4a4a;
-    display: flex;
-    flex-direction: column;
-}
+
 
 /*sub headings*/
 .skills-page-sub-headings{
@@ -109,8 +105,10 @@
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+    flex-shrink: 0;
     row-gap: 5vw;
     column-gap: 1vw;
+    /*overflow: hidden;*/
 
 }
 /*icon boxes*/
@@ -121,23 +119,72 @@
     justify-content: center;
     align-items: center;
     /*border: 1px solid black;*/
-    /*border-radius: 20px;*/
-    height: 100px;
+    border-radius: 20px;
+    height: 6vw;
     aspect-ratio: 1/1;
     text-shadow: var(--text-shadow);
     transition-duration: 500ms;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .technologies-boxes:hover{
     /*border: 1px solid var(--text-color);*/
     border-radius: 15px;
     scale: 1.1;
-    box-shadow: var(--image-shadow);
-}
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;}
 
 /*icon description texts*/
 .technologies-boxes span{
     font-size: var(--icon-description-size);
 }
+
+/*right side div*/
+#skills-div {
+    height: 90vh;
+    width: 110vh;
+    border: 1px solid #ea4a4a;
+    display: flex;
+    flex-direction: column;
+}
+
+#skill-cards-container {
+    flex: 1; /* take remaining height */
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    border: 1px solid black;
+
+    /* enable vertical scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#skill-card-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    height: 110vw;
+}
+
+.skill-cards {
+    position: sticky;
+    top: 0;
+    height: 20vw;
+    border: 1px solid black;
+    background: white;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.skill-cards:nth-child(2) {
+    top: 3vw;
+}
+.skill-cards:nth-child(3) {
+    top: 6vw;
+}
+.skill-cards:nth-child(4) {
+    top: 9vw;
+}
+
 
 
 
