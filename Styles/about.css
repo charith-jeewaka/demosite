@@ -291,7 +291,7 @@ img.tilt-hover:hover {
     }
 
     .about-section{
-        height: 175vw;
+        height: 190vw;
     }
 
     #about-heading{
@@ -309,6 +309,7 @@ img.tilt-hover:hover {
         justify-content: space-between;
         align-items: center;
         gap: 13px;
+        height: 55vh;
 
     }
 
