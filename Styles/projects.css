@@ -1,4 +1,5 @@
 #projects-section{
+    background: lightcoral;
     position: relative;
     height: 100vh;
     display: flex;
@@ -6,6 +7,6 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    /*border: 1px solid black;*/
+    border: 1px solid black;
     font-size: 35px;
 }
