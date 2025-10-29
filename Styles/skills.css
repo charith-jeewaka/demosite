@@ -433,19 +433,19 @@
 
    /*heading size*/
     #skills-heading h1{
-        font-size: 6.5vw;
+        font-size: 8.5vw;
     }
 
     /*sub headings*/
     .skills-page-sub-headings {
-        font-size: 5vw;
+        font-size: 7vw;
         text-align: center;
         /*border: 1px solid black;*/
         margin-bottom: 10vw;
     }
 
     .skills-technologies-content{
-        height: 273vw;
+        height: 305vw;
         width: 90vw;
         padding: 20px 4% 0 4%;
     }
@@ -454,11 +454,12 @@
     }
 
     #skills-div{
-        width: 85vw;
+        width: 90vw;
     }
 
     #skill-card-display {
         gap: 7vw;
+        width: 90vw;
     }
 
 
@@ -508,13 +509,13 @@
     }
 
     .skill-card-texts .skill-card-headings h1{
-        font-size: 4.5vw;
+        font-size: 6vw;
     }
 
 
 
     .skill-card-texts .skill-card-text-bodys{
-        font-size: 2.7vw;
+        font-size: 2.9vw;
         height: 26vw;
     }
 
