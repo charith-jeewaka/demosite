@@ -3,25 +3,33 @@ const aboutBlocks = document.querySelectorAll("#about-texts .about-texts");
 const content = [
     {
         img: "assets/images/myCollage.jpg",
-        text: `I pursued my secondary education at <a href="https://en.wikipedia.org/wiki/St._John%27s_College,_Panadura" target="_blank" rel="noopener" class="underline-animate">St John's College, Panadura</a>, where I successfully completed my G.C.E. Ordinary Level examinations.`
+        text: `<i class="fa-solid fa-graduation-cap"></i> I pursued my secondary education at <a href="https://en.wikipedia.org/wiki/St._John%27s_College,_Panadura" target="_blank" rel="noopener" class="underline-animate">St John's College, Panadura</a>, where I successfully completed my G.C.E. Ordinary Level examinations.`
     },
     {
         img: "assets/images/myTeam.jpg",
-        text: `We’re a small but <span>passionate</span> team, working together to build meaningful digital experiences. Each of us brings unique strengths <span>and we love what we do.</span>`
+        text: `<span>This is</span> our team a small but <span>passionate</span> team, working together to build meaningful digital experiences. Each of us brings unique strengths <span>and we love what we do.</span>`
     },
     {
-        img: "assets/images/mobileApps.jpg",
-        text: "sdfdfdssfsdfsdf<span>ABS</span>"
+        img: "assets/images/myHobby.jpg",
+        text: "<span>This is</span> our team a small but <span>passionate</span> team, working together to build meaningful digital experiences.\n" +
+            "        Each of us brings unique strengths <span> and we love what we do.</span>"
+
+
+
     },
     {
-        img: "assets/images/webApplication.jpg",
-        text: `aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`
+        img: "assets/images/companies.jpg",
+        text: "I have professional experience working" +
+            " at <span>ASB Fashion</span> for one year as a <span>Visual Merchandiser</span>" +
+            " and <span>Customer Relations Officer.</span>" +
+            " I also worked at <span>Salon Looks</span>" +
+            " for six months as a <span>Videographer</span>."
     }
 ];
 
 let startIndex = 0;      // Which content to show next
 let divIndex = 0;        // Which div to update next
-const intervalTime = 3500;
+const intervalTime = 4000;
 
 // Helper: remove all slide-in direction classes
 function resetSlideDirection(block) {

@@ -48,7 +48,6 @@ window.addEventListener("scroll", () => {
 });
 
 // slide in
-
 const elements = document.querySelectorAll('.slide-in');
 
 window.addEventListener('scroll', () => {
@@ -63,9 +62,8 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
 //cursor
-
-
 const cursor = document.querySelector(".custom-cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -83,3 +81,26 @@ document.addEventListener("click", () => {
     cursor.classList.add("click");
     setTimeout(() => cursor.classList.remove("click"), 400);
 });
+
+
+
+//=================================dark mode
+const toggle = document.getElementById("dark-mode-toggle");
+
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+});
+
+// Optional: save preference in localStorage
+// if(document.body.classList.contains("dark-mode")){
+//     localStorage.setItem("theme", "dark");
+// } else {
+//     localStorage.setItem("theme", "light");
+// }
+// });
+//
+// // Optional: load saved preference on page load
+// if(localStorage.getItem("theme") === "dark"){
+//     document.body.classList.add("dark-mode");
+// }

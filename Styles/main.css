@@ -1,3 +1,57 @@
+/******************************dark mode**********************************/
+
+.dark-mode {
+    background-image: url('../assets/images/darkBg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #dfd6d6;
+}
+
+.dark-mode .btn{
+    background: #dfd6d6;
+    color: black;
+}
+
+.btn::before {
+    background: #777e7e;
+}
+
+.dark-mode .custom-cursor{
+    border: 2px solid #dfd6d6;
+}
+
+.dark-mode .img-box::before{
+    background-color: #dfd6d6;
+}
+.dark-mode #my-logo{
+    color:#dfd6d6 ;
+}
+
+.dark-mode .nav-links li a{
+    color: #dfd6d6;
+}
+
+.dark-mode .nav-links li a::after{
+    background: #dfd6d6;
+}
+
+.dark-mode .outlined-text {
+    color: #f4ebeb;
+    text-shadow:
+            -1px -1px 0 #020102,
+            1px -1px 0 #020102,
+            -1px  1px 0 #020102,
+            1px  1px 0 #020102;
+}
+
+.dark-mode .img-box::after {
+    background-image: url("../assets/images/darkBg.png");
+}
+
+
+
 /* ===========================Base custom cursor=================================== */
 
 .custom-cursor {
