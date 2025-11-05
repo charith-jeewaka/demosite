@@ -1,0 +1,9 @@
+#contact-section{
+    width: 100vw;
+    height: 100vh;
+    background: lemonchiffon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

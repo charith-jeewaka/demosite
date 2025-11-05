@@ -1,22 +1,18 @@
 const aboutBlocks = document.querySelectorAll("#about-texts .about-texts");
 
 const content = [
-    // {
-    //     img: "assets/images/myCollage.jpg",
-    //     text: `<i class="fa-solid fa-graduation-cap"></i> I pursued my secondary education at <a href="https://en.wikipedia.org/wiki/St._John%27s_College,_Panadura" target="_blank" rel="noopener" class="underline-animate">St John's College, Panadura</a>, where I successfully completed my G.C.E. Ordinary Level examinations.`
-    // },
+    {
+        img: "assets/images/myCollage.jpg",
+        text: `<i class="fa-solid fa-graduation-cap"></i> I pursued my secondary education at <a href="https://en.wikipedia.org/wiki/St._John%27s_College,_Panadura" target="_blank" rel="noopener" class="underline-animate">St John's College, Panadura</a>, where I successfully completed my G.C.E. Ordinary Level examinations.`
+    },
     {
         img: "assets/images/myTeam.jpg",
         text: `<span>This is</span> our team a small but <span>passionate</span> team, working together to build meaningful digital experiences. Each of us brings unique strengths <span>and we love what we do.</span>`
     },
-    // {
-    //     img: "assets/images/myHobby.jpg",
-    //     text: "<span>This is</span> our team a small but <span>passionate</span> team, working together to build meaningful digital experiences.\n" +
-    //         "        Each of us brings unique strengths <span> and we love what we do.</span>"
-    //
-    //
-    //
-    // },
+    {
+        img: "assets/images/myHobby.jpg",
+        text:"<span>In my free time,</span> I enjoy capturing moments through <span>photography,</span> exploring new places while traveling, and immersing myself in exciting <span>gaming</span> adventures."
+    },
     {
         img: "assets/images/companies.jpg",
         text: "I have professional experience working" +
