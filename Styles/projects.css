@@ -1,6 +1,6 @@
 .projects-slider-container{
     margin: 0;
-    padding: 0;
+    padding-top: 50px;
     box-sizing: border-box;
 
     height: 100vh;
@@ -8,20 +8,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .slider-images{
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 90vh;
     gap: 3vw;
+    overflow-x: auto;
+    /*overflow-y: hidden;*/
+
 }
 
 .slider-images img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
-
+    border-radius: 7px;
 }
 
 .slider-img{
@@ -32,36 +37,57 @@
 }
 
 .slider-images .slider-img:first-child,.slider-images .slider-img:last-child {
-    height: 300px;
+    height: 425px;
 }
 
 .slider-images .slider-img:nth-child(2),.slider-images .slider-img:nth-child(6){
-    height: 400px;
+    height: 460px;
 }
 
 .slider-images .slider-img:nth-child(3),.slider-images .slider-img:nth-child(4),.slider-images .slider-img:nth-child(5){
     height: 500px;
 }
 
+/*main project name*/
 #projects-section h1{
-    font-size: 25px;
-    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+    letter-spacing: 0.4vw;
+    text-align: center;
     text-transform: uppercase;
     color: white;
     position: absolute;
-    top: 40%;
-    left: -10%;
+    top: 100%;
+    left: 35%;
     transform: rotate(270deg);
-    transition:0.7s ease;
+    transform-origin: left top;
+    transition:1s ease;
+}
+/*to center the h1 and geth tthe full size*/
+#projects-section .large h1{
+    width:500px
+}
+#projects-section .medium h1{
+    width: 460px;
+}
+#projects-section .small h1{
+    width: 425px;
 }
 
 .details{
+    opacity: 0;
+
     position: absolute;
-    bottom: 10px;
-    left: 43px;
+    left: 0;right: 0;
+    height: 60%;
+    bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #projects-section .details h2{
+    /*opacity: 0;*/
     font-size: 20px;
     text-align: left;
     line-height: 30px;
@@ -71,6 +97,7 @@
 }
 
 #projects-section .details p{
+    /*opacity: 0;*/
     font-size: 18px;
     text-align: left;
     line-height: 25px;
@@ -80,15 +107,16 @@
 }
 
 .slider-img.active{
-    width: 500px !important;
-    height: 550px !important;
+    width: 400px !important;
+    height: 500px !important;
 }
 
 .slider-img.active h1{
     display: none;
 }
 
-.slider-img.active .details p , .slider-img.active .details h2{
+.slider-img.active .details{
     display: block;
+    opacity: 1;
 }
 
