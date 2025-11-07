@@ -47,6 +47,7 @@ const popupDescription = document.querySelector(".popup-description");
 const popupImage = document.querySelector(".popup-image");
 const usedTechnologies = document.querySelector(".used-technologies");
 
+// details data
 const projects = {
     "pjct-happy-chat": {
         title: "HAPPY CHAT",
@@ -56,13 +57,13 @@ const projects = {
     },
     "pjct-ds-manager": {
         title: "DS MANAGER",
-        image: "assets/images/DSManager.png",
+        image: "assets/images/ds-manager-sh.png",
         description: "DS Manager is a desktop application for managing student records, batch schedules, payments, and class attendance.",
         technologies: ["Java", "JavaFX", "Hibernate", "MySQL","Layered","CSS"]
     },
     "pjct-creative-flora": {
         title: "CREATIVE FLORA",
-        image: "assets/images/CreativeFlora.png",
+        image: "assets/images/creative-flora-sh.png",
         description: "Creative Flora is a florist POS system that tracks plant growth stages and adjusts pricing dynamically, designed with layered architecture.",
         technologies: ["Java", "JavaFX", "MVC", "MySQL","CSS"]
     },
@@ -74,7 +75,7 @@ const projects = {
     },
     "pjct-portfolio": {
         title: "MY PORTFOLIO",
-        image: "assets/images/CreativeFlora.png",
+        image: "assets/images/portfolio-sh.png",
         description: "fx CALCULATOR is a florist POS system that tracks plant growth stages and adjusts pricing dynamically, designed with layered architecture.",
         technologies: ["JS", "HTML", "CSS"]
     }
@@ -109,6 +110,15 @@ popup.addEventListener("click", (e) => {
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") popup.style.display = "none";
+});
+
+
+
+// view the image
+document.querySelectorAll(".popup-image").forEach(img => {
+    img.addEventListener("click", () => {
+        window.open(img.src, "_blank");
+    });
 });
 
 
