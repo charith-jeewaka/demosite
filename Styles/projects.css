@@ -103,7 +103,9 @@
     bottom: 0;
     padding-left: 10px;
     padding-right: 10px;
-    backdrop-filter: blur(1px);
+    /*backdrop-filter: blur(1px);*/
+    background: rgba(0,0,0,0.3);
+
 }
 
 #projects-section .details h2{
@@ -144,6 +146,14 @@
     width: 70px;
     box-shadow: var(--image-shadow);
     backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.3);
+
+}
+
+#projects-section .project-btn:hover {
+    transform: scale(1.1);        /* Slightly enlarge */
+    background: rgba(255,255,255,0.2); /* Light frosted background */
+    box-shadow: 0 0 10px rgba(255,255,255,0.6); /* Glow */
 }
 
 .slider-img.active{
@@ -158,5 +168,85 @@
 .slider-img.active .details{
     display: block;
     opacity: 1;
+}
+
+
+
+
+
+/* Popup background (hidden by default) */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup h2{
+    font-size: 35px;
+
+}
+.popup h3{
+    font-size: 25px;
+
+}
+
+/* Popup box */
+.popup .popup-content {
+    background: #f4ebeb;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /*color: black;*/
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 15px #000;
+    animation: fadeIn 0.5s ease;
+    text-shadow: var(--text-shadow);
+}
+
+/*image*/
+.popup .popup-image {
+    height:200px;
+    width: 350px;
+    border: 1px solid black;
+    /*box-shadow: var(--image-shadow);*/
+}
+
+
+/* Close button */
+.popup .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+
+/* technologie tags */
+.used-technologies span {
+    position: relative;
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 4px;
+    font-size: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: transform .5s ease, box-shadow .4s ease;
+}
+
+
+/* optional: color or glow on hover */
+.used-technologies span:hover {
+    box-shadow: var(--image-shadow);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
 }
 
