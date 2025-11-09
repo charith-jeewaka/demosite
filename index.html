@@ -21,6 +21,20 @@
     <link rel="stylesheet" href="Styles/projects.css">
     <link rel="stylesheet" href="Styles/Contact.css">
 
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "mpa-5CckDYNpthp7x",
+            });
+        })();
+    </script>
+
+    <script src="js/Contact.js"></script>
+
 </head>
 
 <body>
@@ -47,7 +61,7 @@
                 <li><a href="#skills-section">SKILLS</a></li>
                 <li><a href="#projects-section">PROJECTS</a></li>
                 <li><a href="#assignments">ASSIGNMENTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#contact-section">CONTACT</a></li>
             </ul>
         </nav>
     </div>
@@ -293,10 +307,7 @@
 </section>
 
 
-
-
 <!--project-section -->
-
 <!--main container for slides -->
 <section class="projects-slider-container" id="projects-section">
 
@@ -424,9 +435,33 @@
     </div>
 </section>
 
+<!--contact section-->
 <section id="contact-section">
-    <div>contact</div>
+    <div class="contact-container">
+
+        <!-- FORM (left side) -->
+        <div class="contact-form-box">
+            <h2>Get In Touch</h2>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="name" required autocomplete="name">
+                <input type="email" id="email" name="email" placeholder="email" required autocomplete="email">
+                <input type="text" id="subject" name="subject" placeholder="Subject" autocomplete="off">
+                <textarea id="message" name="message" placeholder="message" required autocomplete="off"></textarea>
+                <button type="submit" class="btn" onclick="sendMail()">Send Message</button>
+            </form>
+        </div>
+
+        <!-- INFO (right side, we style later) -->
+        <div class="contact-info-box">
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+        </div>
+
+    </div>
 </section>
+
 
 <!-- Popup / Modal -->
 <div id="project-popup" class="popup">
@@ -451,6 +486,8 @@
     </p>
 </footer>
 
+
+
 <!--main js-->
 <script src="js/main.js" defer> </script>
 
@@ -471,7 +508,6 @@
 
 <!--projects js -->
 <script src="js/projects.js" defer></script>
-
 
 </body>
 </html>

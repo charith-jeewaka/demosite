@@ -198,6 +198,8 @@
     /*--for effect--*/
     box-shadow: var(--card-shadow);
     backdrop-filter: blur(15px);
+    /*background: white;*/
+
     border-radius: 15px;
     transition-duration: 500ms;
 

@@ -113,6 +113,7 @@
     /*border-radius: 15px;*/
     opacity: 0;
     box-shadow: var(--image-shadow);
+    z-index: 1000;
 }
 #return-home.show{
     opacity: 1;
