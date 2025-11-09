@@ -81,7 +81,7 @@ body {
     margin: 0;
     font-size: 18px;
     /*line-height: 1.5;*/
-    color: #333;
+    /*color: #333;*/
     opacity: 0;
     transform: translateY(20px);
     animation: fadeSlideUp 700ms ease-out forwards;
@@ -524,7 +524,7 @@ footer {
         flex-direction: column;
         justify-content: space-between;
         width: 25px;
-        height: 18px;
+        height: 20px;
         cursor: pointer;
     }
 

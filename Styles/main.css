@@ -9,6 +9,10 @@
     color: #dfd6d6;
 }
 
+.dark-mode .hero i{
+    color: #020102;
+}
+
 .dark-mode .btn{
     background: #dfd6d6;
     color: black;
