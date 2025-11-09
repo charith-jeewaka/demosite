@@ -48,7 +48,7 @@
     position: relative;
     transition:0.7s ease;
     overflow: hidden;
-    box-shadow: var(--image-shadow);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;    /*box-shadow: var(--image-shadow);*/
 
 
 }
@@ -79,7 +79,7 @@
     left: 35%;
     transform: rotate(270deg);
     transform-origin: left top;
-    transition:1s ease;
+    /*transition:1s ease;*/
 }
 
 #projects-section h2:hover{
@@ -117,7 +117,7 @@
     line-height: 30px;
     color: white;
     text-transform: uppercase;
-    transition: 0.7s ease;
+    /*transition: 0.7s ease;*/
 }
 
 #projects-section .details p{
@@ -125,7 +125,7 @@
     text-align: left;
     line-height: 24px;
     text-transform: uppercase;
-    transition: 0.7s ease;
+    /*transition: 0.7s ease;*/
 }
 
 /*card buttons*/

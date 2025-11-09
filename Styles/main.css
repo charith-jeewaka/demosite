@@ -107,7 +107,7 @@
     height: 40px;
     bottom: 30px;
     right: 30px;
-    background: transparent;
+    background: white;
     display: flex;justify-content: center;align-items: center;
     text-decoration: none;
     /*border-radius: 15px;*/

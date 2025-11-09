@@ -58,9 +58,9 @@
             <ul class="nav-links outlined-text">
                 <li><a href="#hero-section">HOME</a></li>
                 <li><a href="#about-section">ABOUT</a></li>
-                <li><a href="#skills-section">SKILLS</a></li>
+                <li><a href="#skills-section">SKILLS & SERVICES</a></li>
                 <li><a href="#projects-section">PROJECTS</a></li>
-                <li><a href="#assignments">ASSIGNMENTS</a></li>
+<!--                <li><a href="#assignments">ASSIGNMENTS</a></li>-->
                 <li><a href="#contact-section">CONTACT</a></li>
             </ul>
         </nav>
@@ -209,18 +209,18 @@
             <div class="skills-page-sub-headings slide-in left"><h2 class="underline-animate">Technologies</h2></div>
             <!--div that holds the icons -->
             <div id="technologies-inner-content-box">
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-java" style="color: #000000;"></i><span>Java</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-node-js" style="color: #000000;"></i><span>NodeJs</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-python" style="color: #000000;"></i><span>Python</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-html5" style="color: #000000;"></i><span>HTML</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-css3-alt" style="color: #000000;"></i><span>CSS</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-react" style="color: #000000;"></i><span>React</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-solid fa-leaf" style="color: #000000;"></i><span>Sprinboot</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-windows" style="color: #000000;"></i><span>Windows</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-ubuntu" style="color: #000000;"></i><span>Ubuntu</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-solid fa-database" style="color: #000000;"></i><span>MySql</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-github" style="color: #000000;"></i><span>GitHub</span></div>
-                <div class="technologies-boxes floating-div"><i class="fa-brands fa-square-gitlab" style="color: #000000;"></i><span>GitLab</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-java"></i><span>Java</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-node-js"></i><span>NodeJs</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-react"></i><span>React</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-solid fa-leaf"></i><span>Sprinboot</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-windows"></i><span>Windows</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-ubuntu"></i><span>Ubuntu</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-solid fa-database"></i><span>MySql</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+                <div class="technologies-boxes floating-div"><i class="fa-brands fa-square-gitlab"></i><span>GitLab</span></div>
 
             </div>
 
@@ -312,7 +312,7 @@
 <section class="projects-slider-container" id="projects-section">
 
     <!--sub image containers -->
-    <div class="slider-images">
+    <div class="slider-images slide-in left">
         <!--projectslide -->
         <div class="slider-img small">
             <img src="assets/images/darkBg.png" alt="1">
@@ -440,23 +440,48 @@
     <div class="contact-container">
 
         <!-- FORM (left side) -->
-        <div class="contact-form-box">
-            <h2>Get In Touch</h2>
+        <div class="contact-form-box slide-in left">
+            <h2 class="contact-headings underline-animate">Get In Touch</h2>
             <form id="contactForm">
-                <input type="text" id="name" name="name" placeholder="name" required autocomplete="name">
-                <input type="email" id="email" name="email" placeholder="email" required autocomplete="email">
-                <input type="text" id="subject" name="subject" placeholder="Subject" autocomplete="off">
-                <textarea id="message" name="message" placeholder="message" required autocomplete="off"></textarea>
-                <button type="submit" class="btn" onclick="sendMail()">Send Message</button>
+                <input type="text" id="name" name="name" placeholder="name" required autocomplete="name" class="contact-input">
+                <input type="email" id="email" name="email" placeholder="email" required autocomplete="email" class="contact-input">
+                <input type="text" id="subject" name="subject" placeholder="Subject" autocomplete="off" class="contact-input">
+                <textarea id="message" name="message" placeholder="message" required autocomplete="off" class="contact-input"></textarea>
+                <div id="contact-button-bar" >
+                    <button type="submit" class="btn" onclick="sendMail()">Send Message</button>
+                </div>
             </form>
         </div>
 
         <!-- INFO (right side, we style later) -->
-        <div class="contact-info-box">
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
+        <div class="contact-info-box slide-in right">
+            <h2 class="contact-headings">My Profile</h2>
+            <div>
+                <div class="info-box">
+                    <h4><i class="fa-solid fa-location-dot fa-bounce"></i>  Address</h4>
+                    <address>44/4, batelanda road, hirana, panadura.</address>
+                </div>
+
+                <div class="info-box">
+                    <h4><i class="fa-solid fa-phone fa-shake"></i>  Call Me</h4>
+                    <p><a href="tel:+94787818129">+94 787 818 129</a></p>
+                </div>
+
+                <div class="info-box">
+                    <h4><i class="fa-solid fa-envelope fa-shake"></i>  Email</h4>
+                    <p><a href="wickramasighajeewaka@gmail.com">wickramasighajeewaka@gmail.com</a></p>
+                </div>
+
+                <div class="info-box">
+                    <h4><i class="fa-solid fa-users fa-fade"></i>  Social Links</h4>
+                    <p>
+                        <a href="https://www.facebook.com/charith.jeewaka.94" target="_blank">Facebook</a> |
+                        <a href="https://www.instagram.com/your-handle" target="_blank">Instagram</a> |
+                        <a href="https://www.linkedin.com/in/charith-jeewaka-7b47a8382/" target="_blank">LinkedIn</a> |
+                        <a href="https://wa.me/94758784000" target="_blank">WhatsApp</a>
+                    </p>
+                </div>
+            </div>
         </div>
 
     </div>
