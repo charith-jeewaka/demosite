@@ -9,10 +9,47 @@
     color: #dfd6d6;
 }
 
+/* Popup box */
+.dark-mode .popup .popup-content {
+    background-image: url('../assets/images/darkBg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #dfd6d6;
+}
+
+/* technologie tags */
+.dark-mode .used-technologies span {
+    border: 1px solid #dfd6d6;
+}
+
+/*hero description color*/
+.dark-mode .hero-content #my-description {
+    color: #dfd6d6;
+}
+
+/*about section*/
+.dark-mode .about-texts-txt {
+    border-bottom : 3px solid #dfd6d6;
+}
+.dark-mode #about-image-texts div {
+    border-bottom : 3px solid #dfd6d6;
+}
+.dark-mode #about-image-texts div a{
+    color: #dfd6d6;
+}
+.dark-mode .about-texts-txt a{
+    color: #dfd6d6;
+}
+
+
+/*social media bar */
 .dark-mode .hero i{
     color: #020102;
 }
 
+/*button color*/
 .dark-mode .btn{
     background: #dfd6d6;
     color: black;
@@ -50,8 +87,24 @@
             1px  1px 0 #020102;
 }
 
+/*png background*/
 .dark-mode .img-box::after {
     background-image: url("../assets/images/darkBg.png");
+}
+
+/*texts*/
+.dark-mode .contact-info-box a{
+    color: white;
+}
+
+ .dark-mode #dark-mode-toggle .fa-moon{
+     display: none;
+     color: #dfd6d6;
+ }
+
+.dark-mode #dark-mode-toggle .fa-sun{
+    display: block;
+    color: #dfd6d6;
 }
 
 

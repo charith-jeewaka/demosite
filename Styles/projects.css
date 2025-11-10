@@ -197,10 +197,14 @@
 
 /* Popup box */
 .popup .popup-content {
-    background: #f4ebeb;
+    background-image: url('../assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
     padding: 10px 20px;
     border-radius: 10px;
-    /*color: black;*/
     max-width: 500px;
     text-align: center;
     box-shadow: 0 0 15px #000;
